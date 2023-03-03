@@ -1,0 +1,4 @@
+logging:
+  level:
+    lfet.demo.pwchecker.java.spring.boot.common: trace
+    ROOT: warn

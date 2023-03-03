@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LFET version="LF-ET 2.2.1 (230211b)" language="German" saveDate="2023.03.03 at 09:01:59 CET" saveUser="constantin">
+  <Conditions>
+    <Condition uId="16615234048759626">
+      <Title language="German" value="Prüfschritt?"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="16615234323539714">
+          <Symbol language="German" value="1"/>
+          <Title language="German" value="Prüfen: Die Passwortlänge"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16615234323559716">
+          <Symbol language="German" value="2"/>
+          <Title language="German" value="Prüfen: Die Anzahl verschiedener Kleinbuchstaben im Passwort"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16617044653984314">
+          <Symbol language="German" value="3"/>
+          <Title language="German" value="Prüfen: Die Anzahl verschiedener Grossbuchstaben im Passwort"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="16615228278098870">
+      <Title language="German" value="Anzahl Zeichen?"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="16615228719388933">
+          <Symbol language="German" value="&lt; 8"/>
+          <Title language="German" value="weniger als 8 Zeichen"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16615228719408935">
+          <Symbol language="German" value="8 - 20"/>
+          <Title language="German" value="8 bis 20 Zeichen"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16615229132358940">
+          <Symbol language="German" value="&gt; 20"/>
+          <Title language="German" value="mehr als 20 Zeichen"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+      <SourceCode codeLanguage="Java" sourceCodeType="Prolog" value="// $$InterfaceEnum.0020"/>
+    </Condition>
+    <Condition uId="16615230806099091">
+      <Title language="German" value="Anzahl verschiedene Kleinbuchstaben?"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="16615230806569094">
+          <Symbol language="German" value="&lt; 2"/>
+          <Title language="German" value="weniger als 2"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16615230806599097">
+          <Symbol language="German" value="&gt;= 2"/>
+          <Title language="German" value="2 oder mehr"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+      <SourceCode codeLanguage="Java" sourceCodeType="Prolog" value="// $$InterfaceEnum.0022"/>
+      <Text language="German" value="abcdefghijklmnopqrstuvwxyz"/>
+    </Condition>
+    <Condition uId="16617044454324135">
+      <Title language="German" value="Anzahl verschiedene Grossbuchstaben?"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="16617044456494138">
+          <Symbol language="German" value="&lt; 2"/>
+          <Title language="German" value="weniger als 2"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16617044456544143">
+          <Symbol language="German" value="&gt;= 2"/>
+          <Title language="German" value="2 oder mehr"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+      <SourceCode codeLanguage="Java" sourceCodeType="Prolog" value="// $$InterfaceEnum.0022"/>
+      <Text language="German" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ"/>
+    </Condition>
+  </Conditions>
+  <Actions>
+    <Action uId="16615228415688872">
+      <Title language="German" value="Anforderung nicht erfüllt"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="16615233342369560">
+          <Symbol language="German" value="Len&lt;8"/>
+          <Title language="German" value="Das Passwort ist zu kurz, es muss 8 bis 20 Zeichen lang sein"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="// $$InterfaceEnum.0030"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16615233082789556">
+          <Symbol language="German" value="Len8-20"/>
+          <Title language="German" value="Das Passwort muss 8 bis 20 Zeichen lang sein"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16615229765749050">
+          <Symbol language="German" value="Len&gt;20"/>
+          <Title language="German" value="Das Passwort ist zu lang, es muss 8 bis 20 Zeichen lang sein"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16615235227650106">
+          <Symbol language="German" value="KB2"/>
+          <Title language="German" value="Das Passwort muss mindestens 2 verschiedene Kleinbuchstaben enthalten"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16617045767914649">
+          <Symbol language="German" value="GB2"/>
+          <Title language="German" value="Das Passwort muss mindestens 2 verschiedene Grossbuchstaben enthalten"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="16615234204909628">
+      <Title language="German" value="Weiter mit Prüfschritt"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="16615234925019975">
+          <Symbol language="German" value="Ende"/>
+          <Title language="German" value="Ende der Passwortprüfung"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16615234926929983">
+          <Symbol language="German" value="2"/>
+          <Title language="German" value="Prüfen: Die Anzahl verschiedener Kleinbuchstaben im Passwort"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16617046142834822">
+          <Symbol language="German" value="3"/>
+          <Title language="German" value="Prüfen: Die Anzahl verschiedener Grossbuchstaben im Passwort"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+  </Actions>
+  <Rules lastId="79">
+    <Rule id="69">
+      <ConditionOccurrenceLink link="16615228719388933"/>
+      <ActionOccurrenceLink link="16615233342369560"/>
+      <ConditionOccurrenceLink link="16615234323539714"/>
+      <ActionOccurrenceLink link="16615234926929983"/>
+    </Rule>
+    <Rule id="77">
+      <ConditionOccurrenceLink link="16615228719408935"/>
+      <ConditionOccurrenceLink link="16615234323539714"/>
+      <ActionOccurrenceLink link="16615234926929983"/>
+    </Rule>
+    <Rule id="70">
+      <ConditionOccurrenceLink link="16615229132358940"/>
+      <ActionOccurrenceLink link="16615229765749050"/>
+      <ConditionOccurrenceLink link="16615234323539714"/>
+      <ActionOccurrenceLink link="16615234926929983"/>
+    </Rule>
+    <Rule id="72">
+      <ConditionOccurrenceLink link="16615234323559716"/>
+      <ConditionOccurrenceLink link="16615230806569094"/>
+      <ActionOccurrenceLink link="16615235227650106"/>
+      <ActionOccurrenceLink link="16617046142834822"/>
+    </Rule>
+    <Rule id="78">
+      <ConditionOccurrenceLink link="16615234323559716"/>
+      <ConditionOccurrenceLink link="16615230806599097"/>
+      <ActionOccurrenceLink link="16617046142834822"/>
+    </Rule>
+    <Rule id="74">
+      <ConditionOccurrenceLink link="16617044653984314"/>
+      <ConditionOccurrenceLink link="16617044456494138"/>
+      <ActionOccurrenceLink link="16617045767914649"/>
+      <ActionOccurrenceLink link="16615234925019975"/>
+    </Rule>
+    <Rule id="79">
+      <ConditionOccurrenceLink link="16617044653984314"/>
+      <ConditionOccurrenceLink link="16617044456544143"/>
+      <ActionOccurrenceLink link="16615234925019975"/>
+    </Rule>
+  </Rules>
+  <UrlsOut>
+    <Url title="Ordner" url="file:///./"/>
+  </UrlsOut>
+  <Title language="German" value="Passwort prüfen"/>
+</LFET>
