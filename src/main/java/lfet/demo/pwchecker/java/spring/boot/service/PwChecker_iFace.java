@@ -12,11 +12,13 @@
 package lfet.demo.pwchecker.java.spring.boot.service;
 
 import javax.annotation.processing.Generated;
+
+import lfet.demo.pwchecker.java.spring.boot.common.DecisionTableTraceableModel;
 import org.springframework.stereotype.Component;
 
 @Generated("LF-ET")
 @Component
-interface PwChecker_iFace<T>
+interface PwChecker_iFace<T extends DecisionTableTraceableModel>
 {
 
     // Prolog Standard <----
@@ -76,8 +78,6 @@ interface PwChecker_iFace<T>
     * - <b>ide.Java.InterfaceEnum.default</b>: MethodName=Prefix; EnumValueName=Symbol, UpperCase, Prefix$
     */
     void _do(PwChecker_iFace.AnforderungNichtErfuellt arg0, T model);
-
-    void _doTrace(java.lang.String dtName, java.lang.String version, int rules, int rule, T model);
 
     /**
     * <b>B02: Anzahl Zeichen?</b><br>

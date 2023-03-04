@@ -15,8 +15,6 @@ class PasswordCheckerService implements PasswordCheckerUseCase, PwChecker_iFace<
 
     final PwChecker_rulesEngine rulesEngine;
 
-    final DecisionTableLoggingFacade decisionTableLoggingFacade;
-
     @Override
     public List<String> check(String password) {
         Model model = new Model(password);
@@ -42,11 +40,6 @@ class PasswordCheckerService implements PasswordCheckerUseCase, PwChecker_iFace<
     @Override
     public void _do(AnforderungNichtErfuellt arg0, Model model) {
         model.checksNotOK.add(arg0.name());
-    }
-
-    @Override
-    public void _doTrace(String dtName, String version, int rules, int rule, Model model) {
-        decisionTableLoggingFacade.traceBeforeRule(dtName, version, rules, rule, model);
     }
 
     @ToString
