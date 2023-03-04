@@ -18,7 +18,7 @@ class DecisionTableLoggingFacadeSlf4 implements DecisionTableLoggingFacade {
     }
 
     @Override
-    public void traceAfterBefore(String dtName, String version, int rules, int rule, DecisionTableTraceableModel model) {
+    public void traceBeforeRule(String dtName, String version, int rules, int rule, DecisionTableTraceableModel model) {
         String additionalLoggingContent = model.traceBeforeRule();
         if (additionalLoggingContent != null && !additionalLoggingContent.isBlank()) {
             log.trace("{}[{}] - {}/{} - {}", dtName, version, rule, rules, additionalLoggingContent);

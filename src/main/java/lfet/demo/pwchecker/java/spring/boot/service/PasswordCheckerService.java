@@ -46,7 +46,7 @@ class PasswordCheckerService implements PasswordCheckerUseCase, PwChecker_iFace<
 
     @Override
     public void _doTrace(String dtName, String version, int rules, int rule, Model model) {
-        decisionTableLoggingFacade.traceAfterBefore(dtName, version, rules, rule, model);
+        decisionTableLoggingFacade.traceBeforeRule(dtName, version, rules, rule, model);
     }
 
     @ToString
