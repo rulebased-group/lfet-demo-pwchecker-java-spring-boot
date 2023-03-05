@@ -9,7 +9,7 @@
 // profile LFET.Java.Prolog.Standard.Interface.ini not found
 // used LF-ET 2.2.1 (230424b) build in default
 
-package lfet.demo.pwchecker.java.spring.boot.service;
+package lfet.demo.pwchecker.java.spring.boot.validator;
 
 import javax.annotation.processing.Generated;
 
@@ -26,7 +26,7 @@ interface PwChecker_iFace<T extends lfet.demo.pwchecker.java.spring.boot.common.
     * - <b>IDE.Java.InterfaceEnum.10</b>: IncludeTagsTitle=Anzahl Zeichen; Symbol=Interval<br>
     * - <b>ide.Java.InterfaceEnum.default</b>: MethodName=Prefix; EnumValueName=Symbol, UpperCase, Prefix$
     */
-    boolean _is(PwChecker_iFace.AnzahlZeichen arg0, T model);
+    boolean _is(AnzahlZeichen arg0, T model);
 
     /**
     * <b>B03: Anzahl verschiedene Kleinbuchstaben?</b><br>
@@ -37,7 +37,7 @@ interface PwChecker_iFace<T extends lfet.demo.pwchecker.java.spring.boot.common.
     * - <b>IDE.Java.InterfaceEnum.20</b>: IncludeTagsTitle=Anzahl verschiedene; Symbol=Interval; CA=Text<br>
     * - <b>ide.Java.InterfaceEnum.default</b>: MethodName=Prefix; EnumValueName=Symbol, UpperCase, Prefix$
     */
-    boolean _is(PwChecker_iFace.AnzahlVerschiedeneKleinbuchstaben arg0, T model);
+    boolean _is(AnzahlVerschiedeneKleinbuchstaben arg0, T model);
 
     /**
     * <b>B04: Anzahl verschiedene Grossbuchstaben?</b><br>
@@ -48,7 +48,7 @@ interface PwChecker_iFace<T extends lfet.demo.pwchecker.java.spring.boot.common.
     * - <b>IDE.Java.InterfaceEnum.20</b>: IncludeTagsTitle=Anzahl verschiedene; Symbol=Interval; CA=Text<br>
     * - <b>ide.Java.InterfaceEnum.default</b>: MethodName=Prefix; EnumValueName=Symbol, UpperCase, Prefix$
     */
-    boolean _is(PwChecker_iFace.AnzahlVerschiedeneGrossbuchstaben arg0, T model);
+    boolean _is(AnzahlVerschiedeneGrossbuchstaben arg0, T model);
 
     /**
     * <b>B05: Anzahl verschiedene Ziffern?</b><br>
@@ -79,7 +79,7 @@ interface PwChecker_iFace<T extends lfet.demo.pwchecker.java.spring.boot.common.
     * - <b>IDE.Java.InterfaceEnum.30</b>: IncludeTagsTitle=Anforderung; Title<br>
     * - <b>ide.Java.InterfaceEnum.default</b>: MethodName=Prefix; EnumValueName=Symbol, UpperCase, Prefix$
     */
-    void _do(PwChecker_iFace.AnforderungNichtErfuellt arg0, T model);
+    void _do(AnforderungNichtErfuellt arg0, T model);
 
     /**
     * <b>B02: Anzahl Zeichen?</b><br>

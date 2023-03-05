@@ -12,7 +12,6 @@ lfet.project.ini:
     Java:
       Enabled: true
 
-      Package: group.rulebased.lfet.demo
       Source:
         Path: ${project.root}/../../java/${package}
         Encoding: UTF-8

@@ -1,0 +1,18 @@
+# Zusätzliche Einstellungen für alle ET's in dieser Unter-Ordnerstruktur
+# Überschreiben/Übersteuern ggf. Parameter von übergeordneten Project.ini-Dateien
+
+lfet:
+  nested: true
+  ide:
+    java:
+      package: "lfet.demo.pwchecker.java.spring.boot.validator"
+      interface:
+        rulesClass:
+          additionalImports:
+            - lfet.demo.pwchecker.java.spring.boot.common.DecisionTableLoggingFacade
+          trace:
+            beforeRule: |               
+              decisionTableLoggingFacade.traceBeforeRule("$$dtname", "$$version", "$$rules", "$$rule", model);
+            afterRule: |
+              decisionTableLoggingFacade.traceAfterRule("$$dtname", "$$version", "$$rules", "$$rule", model);              
+              

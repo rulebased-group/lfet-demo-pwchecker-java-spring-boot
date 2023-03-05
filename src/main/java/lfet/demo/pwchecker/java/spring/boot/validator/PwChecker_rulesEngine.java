@@ -10,11 +10,12 @@
 // profile LFET.Java.Prolog.Standard.Interface.Dt.ini not found
 // used LF-ET 2.2.1 (230424b) build in default
 
-package lfet.demo.pwchecker.java.spring.boot.service;
+package lfet.demo.pwchecker.java.spring.boot.validator;
+
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.processing.Generated;
-import org.springframework.stereotype.Component;
-import lombok.RequiredArgsConstructor;
 
 @Generated("LF-ET")
 @Component

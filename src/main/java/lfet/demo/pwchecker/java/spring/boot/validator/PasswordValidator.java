@@ -1,24 +1,24 @@
-package lfet.demo.pwchecker.java.spring.boot.service;
+package lfet.demo.pwchecker.java.spring.boot.validator;
 
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
 import lfet.demo.pwchecker.java.spring.boot.common.IDecisionTableModelTraceable;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
-import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
 @RequiredArgsConstructor
-class PasswordCheckerService implements PasswordCheckerUseCase, PwChecker_iFace<PasswordCheckerService.Model> {
+class PasswordValidator implements ConstraintValidator<StrongPassword, String>, PwChecker_iFace<PasswordValidator.Model> {
 
     final PwChecker_rulesEngine rulesEngine;
 
     @Override
-    public List<String> check(String password) {
-        Model model = new Model(password);
+    public boolean isValid(String value, ConstraintValidatorContext constraintValidatorContext) {
+        Model model = new Model(value);
         rulesEngine.execute(this, model);
-        return model.checksNotOK;
+        return model.checksNotOK.isEmpty();
     }
 
     @Override
