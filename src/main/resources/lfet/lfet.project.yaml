@@ -1,0 +1,55 @@
+# Globale Einstellungen für alle ET's in dieser Ordnerstruktur
+# Diese können von 'nested' Project.ini Dateien in tiefer liegenden Ordner ergänzt oder übersteuert werden
+# Die Einstellungen in dieser Datei entsprechen einem typischen Standard-Setup für Java mit der Variante 'Interface-Generierung'
+# auf Basis von Entscheidungstabellen, die selbst keinerlei Java-Elemente enthalten
+
+lfet:
+  Backup:
+    historyLength: 50
+    historyZip: true
+  ide:
+    default: java
+    java:
+      enabled: true
+      package: group.rulebased.lfet.demo
+      source:
+        path: ${project.root}/../../java/${package}
+        encoding: UTF-8
+      iniFiles:
+        path: ""
+        encoding: UTF-8
+      format: true
+      interface:
+        enabled: true
+        language: en
+        stateless: true
+        ruleGroups: true
+        annotations:
+          - javax.annotation.processing.Generated("LF-ET")
+          - org.springframework.stereotype.Component
+
+        name: "${dt.name}_iFace"
+        varName: iFace
+
+        rulesClass:
+          name: "${dt.name}_rulesEngine"
+          modifier: public
+          methodModifier: public
+          annotations:
+            - javax.annotation.processing.Generated("LF-ET")
+            - org.springframework.stereotype.Component
+            - lombok.RequiredArgsConstructor
+
+        modifier: ""
+        methodModifier: ""
+
+        prefixIs: _is
+        prefixDo: _do
+        baseOfVersion: DT
+
+        enum:
+          default: MethodName=Prefix; EnumValueName=Symbol, UpperCase, Prefix$
+          0010: includeTagsSource=$$InterfaceEnum.0010
+          0020: includeTagsSource=$$InterfaceEnum.0020; Symbol=Interval
+          0022: includeTagsSource=$$InterfaceEnum.0022; Symbol=Interval; CA=Text
+          0030: includeTagsSource=$$InterfaceEnum.0030; Title
