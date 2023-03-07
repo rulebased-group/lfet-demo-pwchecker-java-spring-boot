@@ -11,7 +11,7 @@ lfet:
           additionalImports:
             - lfet.demo.pwchecker.java.spring.boot.common.DecisionTableLoggingFacade
           trace:
-            beforeRule: |
+            beforeRule: |               
               decisionTableLoggingFacade.traceBeforeRule("$$dtname", "$$version", "$$rules", "$$rule", model);
             afterRule: |
               decisionTableLoggingFacade.traceAfterRule("$$dtname", "$$version", "$$rules", "$$rule", model);              
