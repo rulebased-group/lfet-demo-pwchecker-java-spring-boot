@@ -1,6 +1,5 @@
 package lfet.demo.pwchecker.java.spring.boot.service;
 
-import lfet.demo.pwchecker.java.spring.boot.common.DecisionTableLoggingFacade;
 import lfet.demo.pwchecker.java.spring.boot.common.DecisionTableTraceableModel;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
@@ -51,8 +50,8 @@ class PasswordCheckerService implements PasswordCheckerUseCase, PwChecker_iFace<
 
         Model(String password) {
             this.password = password;
-            this.onlyLowerLetter = password.replaceAll("[A-Z]*", "");
-            this.onlyUpperLetter = password.replaceAll("[a-z]*", "");
+            this.onlyLowerLetter = password.replaceAll("[^a-z]*", "");
+            this.onlyUpperLetter = password.replaceAll("[^A-Z]*", "");
         }
 
         @Override
