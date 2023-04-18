@@ -1,6 +1,9 @@
 # Zusätzliche Einstellungen für alle ET's in dieser Unter-Ordnerstruktur
 # Überschreiben/Übersteuern ggf. Parameter von übergeordneten Project.ini-Dateien
 
-nested.project.ini = true
+lfet.project.ini:
 
-ide.java.package = lfet.demo.pwchecker.java.spring.boot.service
+  nested.project.ini: true
+
+  ide.java:
+    Package: lfet.demo.pwchecker.java.spring.boot.service
