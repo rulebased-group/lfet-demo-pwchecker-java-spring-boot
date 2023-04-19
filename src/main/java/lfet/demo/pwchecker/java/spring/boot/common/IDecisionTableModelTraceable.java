@@ -1,6 +1,6 @@
 package lfet.demo.pwchecker.java.spring.boot.common;
 
-public interface DecisionTableTraceableModel {
+public interface IDecisionTableModelTraceable {
 
     String traceBeforeRule();
 

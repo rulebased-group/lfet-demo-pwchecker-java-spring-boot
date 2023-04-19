@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LfetDemoPwCheckerJavaSprinBootApplication {
+public class LFETDemoPwCheckerJavaSpringBootApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(LfetDemoPwCheckerJavaSprinBootApplication.class, args);
+        SpringApplication.run(LFETDemoPwCheckerJavaSpringBootApplication.class, args);
     }
 }

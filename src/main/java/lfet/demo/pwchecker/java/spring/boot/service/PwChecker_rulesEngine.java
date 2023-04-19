@@ -14,14 +14,16 @@ package lfet.demo.pwchecker.java.spring.boot.service;
 
 import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
-import lombok.extern.slf4j.Slf4j;
+import lombok.RequiredArgsConstructor;
 
 @Generated("LF-ET")
 @Component
-@Slf4j
-public class PwChecker_rulesEngine
+@RequiredArgsConstructor
+class PwChecker_rulesEngine
 {
-    public <T> void execute(PwChecker_iFace<T> iFace, T model)
+    final lfet.demo.pwchecker.java.spring.boot.common.DecisionTableLoggingFacade decisionTableLoggingFacade;
+
+    <T extends lfet.demo.pwchecker.java.spring.boot.common.IDecisionTableModelTraceable> void execute(PwChecker_iFace<T> iFace, T model)
     {
 
         // Prolog Standard <----
@@ -39,12 +41,15 @@ public class PwChecker_rulesEngine
                 {
                     // Rule R01 ---->
 
-                    iFace._doTrace("PwChecker", "20230303.090159", 7, 1, model);
+                    // logging beforeRule
+                    decisionTableLoggingFacade.traceBeforeRule("PwChecker","20230303.090159",1,7,model);
 
                     iFace._do(PwChecker_iFace.AnforderungNichtErfuellt.$LENLESS8 /* Len<8 */ , model);
 
                     ruleGroup = 2;
                     exit = false;
+
+                    decisionTableLoggingFacade.traceAfterRule("PwChecker","20230303.090159",1,7,model);
 
                     // Rule R01 <----
                 }
@@ -52,10 +57,13 @@ public class PwChecker_rulesEngine
                 {
                     // Rule R02 ---->
 
-                    iFace._doTrace("PwChecker", "20230303.090159", 7, 2, model);
+                    // logging beforeRule
+                    decisionTableLoggingFacade.traceBeforeRule("PwChecker","20230303.090159",2,7,model);
 
                     ruleGroup = 2;
                     exit = false;
+
+                    decisionTableLoggingFacade.traceAfterRule("PwChecker","20230303.090159",2,7,model);
 
                     // Rule R02 <----
                 }
@@ -63,12 +71,15 @@ public class PwChecker_rulesEngine
                 {
                     // Rule R03 ---->
 
-                    iFace._doTrace("PwChecker", "20230303.090159", 7, 3, model);
+                    // logging beforeRule
+                    decisionTableLoggingFacade.traceBeforeRule("PwChecker","20230303.090159",3,7,model);
 
                     iFace._do(PwChecker_iFace.AnforderungNichtErfuellt.$LENGREATER20 /* Len>20 */ , model);
 
                     ruleGroup = 2;
                     exit = false;
+
+                    decisionTableLoggingFacade.traceAfterRule("PwChecker","20230303.090159",3,7,model);
 
                     // Rule R03 <----
                 }
@@ -79,12 +90,15 @@ public class PwChecker_rulesEngine
                 {
                     // Rule R04 ---->
 
-                    iFace._doTrace("PwChecker", "20230303.090159", 7, 4, model);
+                    // logging beforeRule
+                    decisionTableLoggingFacade.traceBeforeRule("PwChecker","20230303.090159",4,7,model);
 
                     iFace._do(PwChecker_iFace.AnforderungNichtErfuellt.$KB2, model);
 
                     ruleGroup = 3;
                     exit = false;
+
+                    decisionTableLoggingFacade.traceAfterRule("PwChecker","20230303.090159",4,7,model);
 
                     // Rule R04 <----
                 }
@@ -92,10 +106,13 @@ public class PwChecker_rulesEngine
                 {
                     // Rule R05 ---->
 
-                    iFace._doTrace("PwChecker", "20230303.090159", 7, 5, model);
+                    // logging beforeRule
+                    decisionTableLoggingFacade.traceBeforeRule("PwChecker","20230303.090159",5,7,model);
 
                     ruleGroup = 3;
                     exit = false;
+
+                    decisionTableLoggingFacade.traceAfterRule("PwChecker","20230303.090159",5,7,model);
 
                     // Rule R05 <----
                 }
@@ -106,11 +123,14 @@ public class PwChecker_rulesEngine
                 {
                     // Rule R06 ---->
 
-                    iFace._doTrace("PwChecker", "20230303.090159", 7, 6, model);
+                    // logging beforeRule
+                    decisionTableLoggingFacade.traceBeforeRule("PwChecker","20230303.090159",6,7,model);
 
                     iFace._do(PwChecker_iFace.AnforderungNichtErfuellt.$GB2, model);
 
                     exit = true;
+
+                    decisionTableLoggingFacade.traceAfterRule("PwChecker","20230303.090159",6,7,model);
 
                     // Rule R06 <----
                 }
@@ -118,9 +138,12 @@ public class PwChecker_rulesEngine
                 {
                     // Rule R07 ---->
 
-                    iFace._doTrace("PwChecker", "20230303.090159", 7, 7, model);
+                    // logging beforeRule
+                    decisionTableLoggingFacade.traceBeforeRule("PwChecker","20230303.090159",7,7,model);
 
                     exit = true;
+
+                    decisionTableLoggingFacade.traceAfterRule("PwChecker","20230303.090159",7,7,model);
 
                     // Rule R07 <----
                 }

@@ -28,26 +28,37 @@ lfet.project.ini:
       Interface:
         Enabled: true
         Language: en
-        Stateless: true
-        RuleGroups: true
-        PrefixIs: _is
-        PrefixDo: _do
+        Prefix:
+          Is: _is
+          Do: _do
+        Rule:
+          Groups: true
+          # Methods: true
         Annotations:
         - javax.annotation.processing.Generated("LF-ET")
-        - org.springframework.stereotype.Component
+        Stateless: lfet.demo.pwchecker.java.spring.boot.common.IDecisionTableModelTraceable
         Name: ${dt.name}_iFace
         VarName: iFace
-        Modifier: ""
-        MethodModifier: ""
+        Modifier: '""'
+        MethodModifier: '""'
+        # tracing nicht in das interface generieren
+        trace: off
+
 
         RulesClass:
           Annotations:
           - javax.annotation.processing.Generated("LF-ET")
           - org.springframework.stereotype.Component
-          - lombok.extern.slf4j.Slf4j
+          - lombok.RequiredArgsConstructor
           Name: ${dt.name}_rulesEngine
-          Modifier: public
-          MethodModifier: public
+          Modifier: '""'
+          MethodModifier: '""'
+          Vars: final lfet.demo.pwchecker.java.spring.boot.common.DecisionTableLoggingFacade decisionTableLoggingFacade;
+          Trace:
+            BeforeRule: |
+              // logging beforeRule
+              decisionTableLoggingFacade.traceBeforeRule("$$dtname","$$version",$$rule,$$rules,model);
+            AfterRule: decisionTableLoggingFacade.traceAfterRule("$$dtname","$$version",$$rule,$$rules,model);
 
       InterfaceEnum:
         Default:

@@ -1,7 +1,6 @@
 package lfet.demo.pwchecker.java.spring.boot.service;
 
-import lfet.demo.pwchecker.java.spring.boot.common.DecisionTableLoggingFacade;
-import lfet.demo.pwchecker.java.spring.boot.common.DecisionTableTraceableModel;
+import lfet.demo.pwchecker.java.spring.boot.common.IDecisionTableModelTraceable;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 import org.springframework.stereotype.Service;
@@ -14,8 +13,6 @@ import java.util.List;
 class PasswordCheckerService implements PasswordCheckerUseCase, PwChecker_iFace<PasswordCheckerService.Model> {
 
     final PwChecker_rulesEngine rulesEngine;
-
-    final DecisionTableLoggingFacade decisionTableLoggingFacade;
 
     @Override
     public List<String> check(String password) {
@@ -44,13 +41,9 @@ class PasswordCheckerService implements PasswordCheckerUseCase, PwChecker_iFace<
         model.checksNotOK.add(arg0.name());
     }
 
-    @Override
-    public void _doTrace(String dtName, String version, int rules, int rule, Model model) {
-        decisionTableLoggingFacade.traceBeforeRule(dtName, version, rules, rule, model);
-    }
 
     @ToString
-    static class Model implements DecisionTableTraceableModel {
+    static class Model implements IDecisionTableModelTraceable {
         final List<String> checksNotOK = new ArrayList<>();
         final String password;
         final String onlyUpperLetter;

@@ -12,11 +12,9 @@
 package lfet.demo.pwchecker.java.spring.boot.service;
 
 import javax.annotation.processing.Generated;
-import org.springframework.stereotype.Component;
 
 @Generated("LF-ET")
-@Component
-public interface PwChecker_iFace<T>
+interface PwChecker_iFace<T extends lfet.demo.pwchecker.java.spring.boot.common.IDecisionTableModelTraceable>
 {
 
     // Prolog Standard <----
@@ -29,10 +27,10 @@ public interface PwChecker_iFace<T>
     * $$InterfaceEnum.0020<br>
     * <br>
     * The enum generation has been triggered in project.ini by:<br>
-    * - <b>ide.Java.InterfaceEnum.20</b>: IncludeTagsSource=$$InterfaceEnum.0020; Symbol=Interval<br>
+    * - <b>IDE.Java.InterfaceEnum.20</b>: IncludeTagsSource=$$InterfaceEnum.0020; Symbol=Interval<br>
     * - <b>ide.Java.InterfaceEnum.default</b>: MethodName=Prefix; EnumValueName=Symbol, UpperCase, Prefix$
     */
-    public boolean _is(PwChecker_iFace.AnzahlZeichen arg0, T model);
+    boolean _is(PwChecker_iFace.AnzahlZeichen arg0, T model);
 
     /**
     * <b>B03: Anzahl verschiedene Kleinbuchstaben?</b><br>
@@ -44,10 +42,10 @@ public interface PwChecker_iFace<T>
     * $$InterfaceEnum.0022<br>
     * <br>
     * The enum generation has been triggered in project.ini by:<br>
-    * - <b>ide.Java.InterfaceEnum.22</b>: IncludeTagsSource=$$InterfaceEnum.0022; Symbol=Interval; CA=Text<br>
+    * - <b>IDE.Java.InterfaceEnum.22</b>: IncludeTagsSource=$$InterfaceEnum.0022; Symbol=Interval; CA=Text<br>
     * - <b>ide.Java.InterfaceEnum.default</b>: MethodName=Prefix; EnumValueName=Symbol, UpperCase, Prefix$
     */
-    public boolean _is(PwChecker_iFace.AnzahlVerschiedeneKleinbuchstaben arg0, T model);
+    boolean _is(PwChecker_iFace.AnzahlVerschiedeneKleinbuchstaben arg0, T model);
 
     /**
     * <b>B04: Anzahl verschiedene Grossbuchstaben?</b><br>
@@ -59,10 +57,10 @@ public interface PwChecker_iFace<T>
     * $$InterfaceEnum.0022<br>
     * <br>
     * The enum generation has been triggered in project.ini by:<br>
-    * - <b>ide.Java.InterfaceEnum.22</b>: IncludeTagsSource=$$InterfaceEnum.0022; Symbol=Interval; CA=Text<br>
+    * - <b>IDE.Java.InterfaceEnum.22</b>: IncludeTagsSource=$$InterfaceEnum.0022; Symbol=Interval; CA=Text<br>
     * - <b>ide.Java.InterfaceEnum.default</b>: MethodName=Prefix; EnumValueName=Symbol, UpperCase, Prefix$
     */
-    public boolean _is(PwChecker_iFace.AnzahlVerschiedeneGrossbuchstaben arg0, T model);
+    boolean _is(PwChecker_iFace.AnzahlVerschiedeneGrossbuchstaben arg0, T model);
 
     /**
     * <b>A01: Anforderung nicht erfüllt</b><br>
@@ -72,12 +70,10 @@ public interface PwChecker_iFace<T>
     * $$InterfaceEnum.0030<br>
     * <br>
     * The enum generation has been triggered in project.ini by:<br>
-    * - <b>ide.Java.InterfaceEnum.30</b>: IncludeTagsSource=$$InterfaceEnum.0030; Title=<br>
+    * - <b>IDE.Java.InterfaceEnum.30</b>: IncludeTagsSource=$$InterfaceEnum.0030; Title=<br>
     * - <b>ide.Java.InterfaceEnum.default</b>: MethodName=Prefix; EnumValueName=Symbol, UpperCase, Prefix$
     */
-    public void _do(PwChecker_iFace.AnforderungNichtErfuellt arg0, T model);
-
-    public void _doTrace(java.lang.String dtName, java.lang.String version, int rules, int rule, T model);
+    void _do(PwChecker_iFace.AnforderungNichtErfuellt arg0, T model);
 
     /**
     * <b>B02: Anzahl Zeichen?</b><br>
@@ -87,7 +83,7 @@ public interface PwChecker_iFace<T>
     * $$InterfaceEnum.0020<br>
     * <br>
     * The enum generation has been triggered in project.ini by:<br>
-    * - <b>ide.Java.InterfaceEnum.20</b>: IncludeTagsSource=$$InterfaceEnum.0020; Symbol=Interval<br>
+    * - <b>IDE.Java.InterfaceEnum.20</b>: IncludeTagsSource=$$InterfaceEnum.0020; Symbol=Interval<br>
     * - <b>ide.Java.InterfaceEnum.default</b>: MethodName=Prefix; EnumValueName=Symbol, UpperCase, Prefix$
     */
     enum AnzahlZeichen
@@ -163,7 +159,7 @@ public interface PwChecker_iFace<T>
     * $$InterfaceEnum.0022<br>
     * <br>
     * The enum generation has been triggered in project.ini by:<br>
-    * - <b>ide.Java.InterfaceEnum.22</b>: IncludeTagsSource=$$InterfaceEnum.0022; Symbol=Interval; CA=Text<br>
+    * - <b>IDE.Java.InterfaceEnum.22</b>: IncludeTagsSource=$$InterfaceEnum.0022; Symbol=Interval; CA=Text<br>
     * - <b>ide.Java.InterfaceEnum.default</b>: MethodName=Prefix; EnumValueName=Symbol, UpperCase, Prefix$
     */
     enum AnzahlVerschiedeneKleinbuchstaben
@@ -235,7 +231,7 @@ public interface PwChecker_iFace<T>
     * $$InterfaceEnum.0022<br>
     * <br>
     * The enum generation has been triggered in project.ini by:<br>
-    * - <b>ide.Java.InterfaceEnum.22</b>: IncludeTagsSource=$$InterfaceEnum.0022; Symbol=Interval; CA=Text<br>
+    * - <b>IDE.Java.InterfaceEnum.22</b>: IncludeTagsSource=$$InterfaceEnum.0022; Symbol=Interval; CA=Text<br>
     * - <b>ide.Java.InterfaceEnum.default</b>: MethodName=Prefix; EnumValueName=Symbol, UpperCase, Prefix$
     */
     enum AnzahlVerschiedeneGrossbuchstaben
@@ -303,7 +299,7 @@ public interface PwChecker_iFace<T>
     * $$InterfaceEnum.0030<br>
     * <br>
     * The enum generation has been triggered in project.ini by:<br>
-    * - <b>ide.Java.InterfaceEnum.30</b>: IncludeTagsSource=$$InterfaceEnum.0030; Title=<br>
+    * - <b>IDE.Java.InterfaceEnum.30</b>: IncludeTagsSource=$$InterfaceEnum.0030; Title=<br>
     * - <b>ide.Java.InterfaceEnum.default</b>: MethodName=Prefix; EnumValueName=Symbol, UpperCase, Prefix$
     */
     enum AnforderungNichtErfuellt
