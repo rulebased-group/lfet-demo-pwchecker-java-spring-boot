@@ -1,4 +1,4 @@
 logging:
   level:
-    lfet.demo.pwchecker.java.spring.boot.common: trace
+    decision.table.PwChecker: trace
     ROOT: warn
