@@ -1,0 +1,27 @@
+# Zusätzliche Einstellungen für alle ET's in dieser Unter-Ordnerstruktur
+# Überschreiben/Übersteuern ggf. Parameter von übergeordneten Project.ini-Dateien
+
+lfet.project.ini:
+
+  nested.project.ini: true
+
+  IDE:
+
+    Java:
+
+      Package: lfet.demo.pwchecker.java.spring.boot.service
+
+      InterfaceEnum:
+        Default:
+          MethodName: Prefix
+          EnumValueName: Symbol, UpperCase, Prefix$
+        10:
+          Symbol: Interval
+          IncludeTagsTitle: Anzahl Zeichen
+        20:
+          Symbol: Interval
+          CA: Text
+          IncludeTagsTitle: Anzahl verschiedene
+        30:
+          Title: ""
+          IncludeTagsTitle: Anforderung

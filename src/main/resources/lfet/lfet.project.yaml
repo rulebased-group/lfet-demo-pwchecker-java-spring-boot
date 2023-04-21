@@ -5,10 +5,6 @@
 
 lfet.project.ini:
 
-  BackupHistory:
-    Length: 50
-    Zip: true
-
   IDE:
     
     Default: Java
@@ -44,7 +40,6 @@ lfet.project.ini:
         # tracing nicht in das interface generieren
         trace: off
 
-
         RulesClass:
           Annotations:
           - javax.annotation.processing.Generated("LF-ET")
@@ -59,19 +54,3 @@ lfet.project.ini:
               // logging beforeRule
               decisionTableLoggingFacade.traceBeforeRule("$$dtname","$$version",$$rule,$$rules,model);
             AfterRule: decisionTableLoggingFacade.traceAfterRule("$$dtname","$$version",$$rule,$$rules,model);
-
-      InterfaceEnum:
-        Default:
-          MethodName: Prefix
-          EnumValueName: Symbol, UpperCase, Prefix$
-        10:
-          IncludeTagsSource: $$InterfaceEnum.0010
-        20:
-          IncludeTagsSource: $$InterfaceEnum.0020
-          Symbol: Interval
-        22:
-          IncludeTagsSource: $$InterfaceEnum.0022
-          Symbol: Interval; CA=Text
-        30:
-          IncludeTagsSource: $$InterfaceEnum.0030
-          Title: ""

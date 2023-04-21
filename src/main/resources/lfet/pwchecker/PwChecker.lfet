@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230211b)" language="German" saveDate="2023.03.03 at 09:01:59 CET" saveUser="constantin">
+<LFET version="LF-ET 2.2.1 (230420a)" language="German" saveDate="2023.04.21 at 06:17:15 CEST" saveUser="lohrfinh">
   <Conditions>
     <Condition uId="16615234048759626">
       <Title language="German" value="Prüfschritt?"/>
@@ -35,7 +35,6 @@
           <Title language="German" value="mehr als 20 Zeichen"/>
         </ConditionOccurrence>
       </ConditionOccurrences>
-      <SourceCode codeLanguage="Java" sourceCodeType="Prolog" value="// $$InterfaceEnum.0020"/>
     </Condition>
     <Condition uId="16615230806099091">
       <Title language="German" value="Anzahl verschiedene Kleinbuchstaben?"/>
@@ -49,7 +48,6 @@
           <Title language="German" value="2 oder mehr"/>
         </ConditionOccurrence>
       </ConditionOccurrences>
-      <SourceCode codeLanguage="Java" sourceCodeType="Prolog" value="// $$InterfaceEnum.0022"/>
       <Text language="German" value="abcdefghijklmnopqrstuvwxyz"/>
     </Condition>
     <Condition uId="16617044454324135">
@@ -64,7 +62,6 @@
           <Title language="German" value="2 oder mehr"/>
         </ConditionOccurrence>
       </ConditionOccurrences>
-      <SourceCode codeLanguage="Java" sourceCodeType="Prolog" value="// $$InterfaceEnum.0022"/>
       <Text language="German" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ"/>
     </Condition>
   </Conditions>
@@ -75,7 +72,6 @@
         <ActionOccurrence uId="16615233342369560">
           <Symbol language="German" value="Len&lt;8"/>
           <Title language="German" value="Das Passwort ist zu kurz, es muss 8 bis 20 Zeichen lang sein"/>
-          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="// $$InterfaceEnum.0030"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16615233082789556">
           <Symbol language="German" value="Len8-20"/>
