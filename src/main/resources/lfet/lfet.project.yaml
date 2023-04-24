@@ -13,16 +13,22 @@ lfet.project.ini:
       Enabled: true
 
       Package: group.rulebased.lfet.demo
-      SourcePath: ${project.root}/../../java/${package}
-      SourceEncoding: UTF-8
-      IniFilesPath: ""
-      IniFilesEncoding: UTF-8
+      Source:
+        Path: ${project.root}/../../java/${package}
+        Encoding: UTF-8
+      IniFiles:
+        Path: ""
+        Encoding: UTF-8
       BaseOfVersion: DT
 
       Format: true
 
       Interface:
         Enabled: true
+        Name: ${dt.name}_iFace
+        Stateless: lfet.demo.pwchecker.java.spring.boot.common.IDecisionTableModelTraceable
+        Annotations:
+          - javax.annotation.processing.Generated("LF-ET")
         Language: en
         Prefix:
           Is: _is
@@ -30,24 +36,24 @@ lfet.project.ini:
         Rule:
           Groups: true
           # Methods: true
-        Annotations:
-        - javax.annotation.processing.Generated("LF-ET")
-        Stateless: lfet.demo.pwchecker.java.spring.boot.common.IDecisionTableModelTraceable
-        Name: ${dt.name}_iFace
         VarName: iFace
         Modifier: '""'
-        MethodModifier: '""'
+        Method:
+          Modifier: '""'
+          Names:
+            CamelCase: true
         # tracing nicht in das interface generieren
-        trace: off
+        Trace: off
 
         RulesClass:
+          Name: ${dt.name}_rulesEngine
           Annotations:
           - javax.annotation.processing.Generated("LF-ET")
           - org.springframework.stereotype.Component
           - lombok.RequiredArgsConstructor
-          Name: ${dt.name}_rulesEngine
           Modifier: '""'
-          MethodModifier: '""'
+          Method:
+            Modifier: '""'
           Vars: final lfet.demo.pwchecker.java.spring.boot.common.DecisionTableLoggingFacade decisionTableLoggingFacade;
           Trace:
             BeforeRule: |

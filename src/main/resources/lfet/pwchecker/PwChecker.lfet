@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230420a)" language="German" saveDate="2023.04.21 at 06:17:15 CEST" saveUser="lohrfinh">
+<LFET version="LF-ET 2.2.1 (230424b)" language="German" saveDate="2023.04.24 at 22:25:13 CEST" saveUser="lohrfinh">
   <Conditions>
     <Condition uId="16615234048759626">
       <Title language="German" value="Prüfschritt?"/>
@@ -11,11 +11,15 @@
         </ConditionOccurrence>
         <ConditionOccurrence uId="16615234323559716">
           <Symbol language="German" value="2"/>
-          <Title language="German" value="Prüfen: Die Anzahl verschiedener Kleinbuchstaben im Passwort"/>
+          <Title language="German" value="Prüfen: Die Anzahl verschiedener Kleinbuchstaben  im Passwort"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16617044653984314">
           <Symbol language="German" value="3"/>
-          <Title language="German" value="Prüfen: Die Anzahl verschiedener Grossbuchstaben im Passwort"/>
+          <Title language="German" value="Prüfen: Die Anzahl verschiedener Grossbuchstaben  im Passwort"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16823668466876620">
+          <Symbol language="German" value="4"/>
+          <Title language="German" value="Prüfen: Die Anzahl verschiedener Sonderzeichen  im Passwort"/>
         </ConditionOccurrence>
       </ConditionOccurrences>
     </Condition>
@@ -64,6 +68,34 @@
       </ConditionOccurrences>
       <Text language="German" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ"/>
     </Condition>
+    <Condition uId="16823677377538791">
+      <Title language="German" value="Anzahl verschiedene Ziffern?"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="16823677379458794">
+          <Symbol language="German" value="&lt; 2"/>
+          <Title language="German" value="weniger als 2"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16823677379488797">
+          <Symbol language="German" value="&gt;= 2"/>
+          <Title language="German" value="2 oder mehr"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+      <Text language="German" value="0123456789"/>
+    </Condition>
+    <Condition uId="16823667805686405">
+      <Title language="German" value="Anzahl verschiedene Sonderzeichen?"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="16823667805716408">
+          <Symbol language="German" value="&lt; 2"/>
+          <Title language="German" value="weniger als 2"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16823667805756412">
+          <Symbol language="German" value="&gt;= 2"/>
+          <Title language="German" value="2 oder mehr"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+      <Text language="German" value=".,/?!|#*()[]{}&lt;&gt;"/>
+    </Condition>
   </Conditions>
   <Actions>
     <Action uId="16615228415688872">
@@ -89,6 +121,10 @@
           <Symbol language="German" value="GB2"/>
           <Title language="German" value="Das Passwort muss mindestens 2 verschiedene Grossbuchstaben enthalten"/>
         </ActionOccurrence>
+        <ActionOccurrence uId="16823669070086975">
+          <Symbol language="German" value="SZ2"/>
+          <Title language="German" value="Das Passwort muss mindestens 2 verschiedene Ziffern oder Sonderzeichen enthalten"/>
+        </ActionOccurrence>
       </ActionOccurrences>
     </Action>
     <Action uId="16615234204909628">
@@ -100,16 +136,20 @@
         </ActionOccurrence>
         <ActionOccurrence uId="16615234926929983">
           <Symbol language="German" value="2"/>
-          <Title language="German" value="Prüfen: Die Anzahl verschiedener Kleinbuchstaben im Passwort"/>
+          <Title language="German" value="Prüfen: Die Anzahl verschiedener Kleinbuchstaben  im Passwort"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16617046142834822">
           <Symbol language="German" value="3"/>
-          <Title language="German" value="Prüfen: Die Anzahl verschiedener Grossbuchstaben im Passwort"/>
+          <Title language="German" value="Prüfen: Die Anzahl verschiedener Grossbuchstaben  im Passwort"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16823669698397154">
+          <Symbol language="German" value="4"/>
+          <Title language="German" value="Prüfen: Die Anzahl verschiedener Sonderzeichen  im Passwort"/>
         </ActionOccurrence>
       </ActionOccurrences>
     </Action>
   </Actions>
-  <Rules lastId="79">
+  <Rules lastId="86">
     <Rule id="69">
       <ConditionOccurrenceLink link="16615228719388933"/>
       <ActionOccurrenceLink link="16615233342369560"/>
@@ -138,15 +178,33 @@
       <ConditionOccurrenceLink link="16615230806599097"/>
       <ActionOccurrenceLink link="16617046142834822"/>
     </Rule>
-    <Rule id="74">
+    <Rule id="80">
       <ConditionOccurrenceLink link="16617044653984314"/>
       <ConditionOccurrenceLink link="16617044456494138"/>
       <ActionOccurrenceLink link="16617045767914649"/>
-      <ActionOccurrenceLink link="16615234925019975"/>
+      <ActionOccurrenceLink link="16823669698397154"/>
     </Rule>
-    <Rule id="79">
+    <Rule id="81">
       <ConditionOccurrenceLink link="16617044653984314"/>
       <ConditionOccurrenceLink link="16617044456544143"/>
+      <ActionOccurrenceLink link="16823669698397154"/>
+    </Rule>
+    <Rule id="84">
+      <ConditionOccurrenceLink link="16823668466876620"/>
+      <ConditionOccurrenceLink link="16823667805716408"/>
+      <ActionOccurrenceLink link="16823669070086975"/>
+      <ActionOccurrenceLink link="16615234925019975"/>
+      <ConditionOccurrenceLink link="16823677379458794"/>
+    </Rule>
+    <Rule id="85">
+      <ConditionOccurrenceLink link="16823668466876620"/>
+      <ConditionOccurrenceLink link="16823667805756412"/>
+      <ActionOccurrenceLink link="16615234925019975"/>
+      <ConditionOccurrenceLink link="16823677379458794"/>
+    </Rule>
+    <Rule id="86">
+      <ConditionOccurrenceLink link="16823668466876620"/>
+      <ConditionOccurrenceLink link="16823677379488797"/>
       <ActionOccurrenceLink link="16615234925019975"/>
     </Rule>
   </Rules>

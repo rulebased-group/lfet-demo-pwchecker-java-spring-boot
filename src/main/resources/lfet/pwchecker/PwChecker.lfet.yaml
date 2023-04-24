@@ -16,12 +16,15 @@ lfet.project.ini:
           MethodName: Prefix
           EnumValueName: Symbol, UpperCase, Prefix$
         10:
+          IncludeTagsTitle:
+            - Anzahl Zeichen
           Symbol: Interval
-          IncludeTagsTitle: Anzahl Zeichen
         20:
+          IncludeTagsTitle:
+            - Anzahl verschiedene
           Symbol: Interval
           CA: Text
-          IncludeTagsTitle: Anzahl verschiedene
         30:
+          IncludeTagsTitle:
+            - Anforderung
           Title: ""
-          IncludeTagsTitle: Anforderung

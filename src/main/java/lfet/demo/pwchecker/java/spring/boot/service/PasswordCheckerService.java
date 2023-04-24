@@ -28,12 +28,21 @@ class PasswordCheckerService implements PasswordCheckerUseCase, PwChecker_iFace<
 
     @Override
     public boolean _is(AnzahlVerschiedeneKleinbuchstaben arg0, Model model) {
-        return arg0.isInSymbolInterval(model.onlyLowerLetter.chars().distinct().count());
+        return arg0.isInSymbolInterval(model.getMatchingCharactersInPassword(arg0.getCAText()).length());
     }
 
     @Override
+    public boolean _is(AnzahlVerschiedeneZiffern arg0, Model model) {
+        return arg0.isInSymbolInterval(model.getMatchingCharactersInPassword(arg0.getCAText()).length());
+    }
+    @Override
     public boolean _is(AnzahlVerschiedeneGrossbuchstaben arg0, Model model) {
-        return arg0.isInSymbolInterval(model.onlyUpperLetter.chars().distinct().count());
+        return arg0.isInSymbolInterval(model.getMatchingCharactersInPassword(arg0.getCAText()).length());
+    }
+
+    @Override
+    public boolean _is(AnzahlVerschiedeneSonderzeichen arg0, Model model) {
+        return arg0.isInSymbolInterval(model.getMatchingCharactersInPassword(arg0.getCAText()).length());
     }
 
     @Override
@@ -41,18 +50,13 @@ class PasswordCheckerService implements PasswordCheckerUseCase, PwChecker_iFace<
         model.checksNotOK.add(arg0.name());
     }
 
-
     @ToString
     static class Model implements IDecisionTableModelTraceable {
         final List<String> checksNotOK = new ArrayList<>();
         final String password;
-        final String onlyUpperLetter;
-        final String onlyLowerLetter;
 
         Model(String password) {
-            this.password = password;
-            this.onlyLowerLetter = password.replaceAll("[A-Z]*", "");
-            this.onlyUpperLetter = password.replaceAll("[a-z]*", "");
+            this.password = password != null ? password : "";
         }
 
         @Override
@@ -63,6 +67,16 @@ class PasswordCheckerService implements PasswordCheckerUseCase, PwChecker_iFace<
         @Override
         public String traceAfterRule() {
             return toString();
+        }
+
+        private String getMatchingCharactersInPassword(String expectedCharacters) {
+            StringBuilder result = new StringBuilder();
+
+            this.password.chars().distinct().mapToObj(c -> (char) c).forEach(c -> {
+                if (expectedCharacters.indexOf(c) >= 0) result.append(c);
+            });
+
+            return result.toString();
         }
     }
 }
