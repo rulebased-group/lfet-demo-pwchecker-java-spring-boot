@@ -58,5 +58,6 @@ lfet.project.ini:
           Trace:
             BeforeRule: |
               // logging beforeRule
+              // $$dtname
               decisionTableLoggingFacade.traceBeforeRule("$$dtname","$$version",$$rule,$$rules,model);
             AfterRule: decisionTableLoggingFacade.traceAfterRule("$$dtname","$$version",$$rule,$$rules,model);

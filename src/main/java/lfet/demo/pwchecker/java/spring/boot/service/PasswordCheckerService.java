@@ -35,6 +35,7 @@ class PasswordCheckerService implements PasswordCheckerUseCase, PwChecker_iFace<
     public boolean _is(AnzahlVerschiedeneZiffern arg0, Model model) {
         return arg0.isInSymbolInterval(model.getMatchingCharactersInPassword(arg0.getCAText()).length());
     }
+
     @Override
     public boolean _is(AnzahlVerschiedeneGrossbuchstaben arg0, Model model) {
         return arg0.isInSymbolInterval(model.getMatchingCharactersInPassword(arg0.getCAText()).length());
@@ -47,13 +48,14 @@ class PasswordCheckerService implements PasswordCheckerUseCase, PwChecker_iFace<
 
     @Override
     public void _do(AnforderungNichtErfuellt arg0, Model model) {
-        model.checksNotOK.add(arg0.name());
+        model.checksNotOK.add(arg0.getTitle());
     }
 
     @ToString
     static class Model implements IDecisionTableModelTraceable {
-        final List<String> checksNotOK = new ArrayList<>();
+
         final String password;
+        final List<String> checksNotOK = new ArrayList<>();
 
         Model(String password) {
             this.password = password != null ? password : "";

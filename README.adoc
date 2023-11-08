@@ -1,0 +1,6 @@
+= LFET Demo PWChecker Java Spring Boot
+
+To run and test the generated password checker service use:
+
+* `mvn clean compile spring-boot:run`
+* `curl http://localhost:8080/password/check?password=_password_`

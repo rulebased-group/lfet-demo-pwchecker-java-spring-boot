@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.2.1 (230424b)" language="German" saveDate="2023.04.24 at 22:25:13 CEST" saveUser="lohrfinh">
+<LFET version="LF-ET 2.3.0 (231107A)" language="German" saveDate="2023.11.08 at 07:34:50 CET" saveUser="lfhl">
   <Conditions>
     <Condition uId="16615234048759626">
       <Title language="German" value="Prüfschritt?"/>
@@ -94,7 +94,7 @@
           <Title language="German" value="2 oder mehr"/>
         </ConditionOccurrence>
       </ConditionOccurrences>
-      <Text language="German" value=".,/?!|#*()[]{}&lt;&gt;"/>
+      <Text language="German" value=".,/?!|#*()[]{}&lt;&gt;&quot;\"/>
     </Condition>
   </Conditions>
   <Actions>
