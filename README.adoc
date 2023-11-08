@@ -4,3 +4,7 @@ To run and test the generated password checker service use:
 
 * `mvn clean compile spring-boot:run`
 * `curl http://localhost:8080/password/check?password=_password_`
+
+Recommended LF-ET-Version for this project:
+
+* `LF-ET 2.3.0 231108a` or newer
