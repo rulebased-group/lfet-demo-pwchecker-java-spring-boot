@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.3.0 (231107A)" language="German" saveDate="2023.11.08 at 07:34:50 CET" saveUser="lfhl">
+<LFET version="LF-ET 2.3.0 (231116A)" language="German" saveDate="2023.11.16 at 19:07:04 CET" saveUser="lfhl">
   <Conditions>
-    <Condition uId="16615234048759626">
-      <Title language="German" value="Prüfschritt?"/>
-      <ConditionOccurrences>
-        <ConditionOccurrence uId="16615234323539714">
-          <Symbol language="German" value="1"/>
-          <Title language="German" value="Prüfen: Die Passwortlänge"/>
-        </ConditionOccurrence>
-        <ConditionOccurrence uId="16615234323559716">
-          <Symbol language="German" value="2"/>
-          <Title language="German" value="Prüfen: Die Anzahl verschiedener Kleinbuchstaben  im Passwort"/>
-        </ConditionOccurrence>
-        <ConditionOccurrence uId="16617044653984314">
-          <Symbol language="German" value="3"/>
-          <Title language="German" value="Prüfen: Die Anzahl verschiedener Grossbuchstaben  im Passwort"/>
-        </ConditionOccurrence>
-        <ConditionOccurrence uId="16823668466876620">
-          <Symbol language="German" value="4"/>
-          <Title language="German" value="Prüfen: Die Anzahl verschiedener Sonderzeichen  im Passwort"/>
-        </ConditionOccurrence>
-      </ConditionOccurrences>
-    </Condition>
     <Condition uId="16615228278098870">
       <Title language="German" value="Anzahl Zeichen?"/>
       <ConditionOccurrences>
@@ -127,85 +106,58 @@
         </ActionOccurrence>
       </ActionOccurrences>
     </Action>
-    <Action uId="16615234204909628">
-      <Title language="German" value="Weiter mit Prüfschritt"/>
+    <Action uId="17001556395127765">
+      <Title language="German" value="Passwort o.k."/>
       <ActionOccurrences>
-        <ActionOccurrence uId="16615234925019975">
-          <Symbol language="German" value="Ende"/>
-          <Title language="German" value="Ende der Passwortprüfung"/>
-        </ActionOccurrence>
-        <ActionOccurrence uId="16615234926929983">
-          <Symbol language="German" value="2"/>
-          <Title language="German" value="Prüfen: Die Anzahl verschiedener Kleinbuchstaben  im Passwort"/>
-        </ActionOccurrence>
-        <ActionOccurrence uId="16617046142834822">
-          <Symbol language="German" value="3"/>
-          <Title language="German" value="Prüfen: Die Anzahl verschiedener Grossbuchstaben  im Passwort"/>
-        </ActionOccurrence>
-        <ActionOccurrence uId="16823669698397154">
-          <Symbol language="German" value="4"/>
-          <Title language="German" value="Prüfen: Die Anzahl verschiedener Sonderzeichen  im Passwort"/>
+        <ActionOccurrence uId="17001556515387901">
+          <Symbol language="German" value="ok"/>
+          <Title language="German" value="alle Anforderungen sind erfüllt"/>
         </ActionOccurrence>
       </ActionOccurrences>
     </Action>
   </Actions>
-  <Rules lastId="86">
-    <Rule id="69">
+  <Rules lastId="95">
+    <Rule id="87">
       <ConditionOccurrenceLink link="16615228719388933"/>
       <ActionOccurrenceLink link="16615233342369560"/>
-      <ConditionOccurrenceLink link="16615234323539714"/>
-      <ActionOccurrenceLink link="16615234926929983"/>
     </Rule>
-    <Rule id="77">
+    <Rule id="88">
       <ConditionOccurrenceLink link="16615228719408935"/>
-      <ConditionOccurrenceLink link="16615234323539714"/>
-      <ActionOccurrenceLink link="16615234926929983"/>
-    </Rule>
-    <Rule id="70">
-      <ConditionOccurrenceLink link="16615229132358940"/>
-      <ActionOccurrenceLink link="16615229765749050"/>
-      <ConditionOccurrenceLink link="16615234323539714"/>
-      <ActionOccurrenceLink link="16615234926929983"/>
-    </Rule>
-    <Rule id="72">
-      <ConditionOccurrenceLink link="16615234323559716"/>
       <ConditionOccurrenceLink link="16615230806569094"/>
       <ActionOccurrenceLink link="16615235227650106"/>
-      <ActionOccurrenceLink link="16617046142834822"/>
     </Rule>
-    <Rule id="78">
-      <ConditionOccurrenceLink link="16615234323559716"/>
+    <Rule id="89">
+      <ConditionOccurrenceLink link="16615228719408935"/>
       <ConditionOccurrenceLink link="16615230806599097"/>
-      <ActionOccurrenceLink link="16617046142834822"/>
-    </Rule>
-    <Rule id="80">
-      <ConditionOccurrenceLink link="16617044653984314"/>
       <ConditionOccurrenceLink link="16617044456494138"/>
       <ActionOccurrenceLink link="16617045767914649"/>
-      <ActionOccurrenceLink link="16823669698397154"/>
     </Rule>
-    <Rule id="81">
-      <ConditionOccurrenceLink link="16617044653984314"/>
+    <Rule id="90">
+      <ConditionOccurrenceLink link="16615228719408935"/>
+      <ConditionOccurrenceLink link="16615230806599097"/>
       <ConditionOccurrenceLink link="16617044456544143"/>
-      <ActionOccurrenceLink link="16823669698397154"/>
-    </Rule>
-    <Rule id="84">
-      <ConditionOccurrenceLink link="16823668466876620"/>
+      <ConditionOccurrenceLink link="16823677379458794"/>
       <ConditionOccurrenceLink link="16823667805716408"/>
       <ActionOccurrenceLink link="16823669070086975"/>
-      <ActionOccurrenceLink link="16615234925019975"/>
-      <ConditionOccurrenceLink link="16823677379458794"/>
     </Rule>
-    <Rule id="85">
-      <ConditionOccurrenceLink link="16823668466876620"/>
+    <Rule id="94">
+      <ConditionOccurrenceLink link="16615228719408935"/>
+      <ConditionOccurrenceLink link="16615230806599097"/>
+      <ConditionOccurrenceLink link="16617044456544143"/>
+      <ConditionOccurrenceLink link="16823677379458794"/>
       <ConditionOccurrenceLink link="16823667805756412"/>
-      <ActionOccurrenceLink link="16615234925019975"/>
-      <ConditionOccurrenceLink link="16823677379458794"/>
+      <ActionOccurrenceLink link="17001556515387901"/>
     </Rule>
-    <Rule id="86">
-      <ConditionOccurrenceLink link="16823668466876620"/>
+    <Rule id="95">
+      <ConditionOccurrenceLink link="16615228719408935"/>
+      <ConditionOccurrenceLink link="16615230806599097"/>
+      <ConditionOccurrenceLink link="16617044456544143"/>
       <ConditionOccurrenceLink link="16823677379488797"/>
-      <ActionOccurrenceLink link="16615234925019975"/>
+      <ActionOccurrenceLink link="17001556515387901"/>
+    </Rule>
+    <Rule id="93">
+      <ConditionOccurrenceLink link="16615229132358940"/>
+      <ActionOccurrenceLink link="16615229765749050"/>
     </Rule>
   </Rules>
   <UrlsOut>

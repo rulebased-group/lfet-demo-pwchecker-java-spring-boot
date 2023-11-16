@@ -51,11 +51,17 @@ class PasswordCheckerService implements PasswordCheckerUseCase, PwChecker_iFace<
         model.checksNotOK.add(arg0.getTitle());
     }
 
+    @Override
+    public void _do(PasswortOK arg0, Model model) {
+        model.passwordCheckedOk = true;
+    }
+
     @ToString
     static class Model implements IDecisionTableModelTraceable {
 
         final String password;
         final List<String> checksNotOK = new ArrayList<>();
+        boolean passwordCheckedOk = false;
 
         Model(String password) {
             this.password = password != null ? password : "";

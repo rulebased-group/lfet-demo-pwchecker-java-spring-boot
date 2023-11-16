@@ -27,4 +27,5 @@ lfet.project.ini:
         30:
           IncludeTagsTitle:
             - Anforderung
+            - Passwort
           Title: ""
