@@ -1,7 +1,7 @@
 # Zusätzliche Einstellungen für alle ET's in dieser Unter-Ordnerstruktur
 # Überschreiben/Übersteuern ggf. Parameter von übergeordneten Project.ini-Dateien
 
-lfet.project.ini:
+LFET:
 
   nested.project.ini: true
 

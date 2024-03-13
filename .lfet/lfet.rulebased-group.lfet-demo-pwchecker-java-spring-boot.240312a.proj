@@ -1,0 +1,25 @@
+# This file must not be changed.
+#
+# The content format is YAML and its checksum value must match
+# with the checksum value stored in the corresponding license file.
+#
+# Any CER's are welcome here: service@rulebased.group
+
+LFET:
+  
+  Project:
+    
+    # the global unique project id
+    Url: https://github.com/rulebased-group/lfet-demo-pwchecker-java-spring-boot.git
+    
+    DecisionTables:
+      
+      # list of regular expressions for allowed decision table file names 
+      # incl. common 'save as' formats
+      NamePattern:
+        - ^PwChecker[.]lfet$
+
+      # list of regex relative from projects content root folder
+      # use always '/' as file separator
+      PathPattern: 
+        - ^[/]?src/main/resources/lfet/pwchecker[/]?$

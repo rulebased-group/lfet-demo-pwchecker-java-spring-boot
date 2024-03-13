@@ -3,7 +3,7 @@
 # Die Einstellungen in dieser Datei entsprechen einem typischen Standard-Setup für Java mit der Variante 'Interface-Generierung'
 # auf Basis von Entscheidungstabellen, die selbst keinerlei Java-Elemente enthalten
 
-lfet.project.ini:
+LFET:
 
   IDE:
     
@@ -19,7 +19,7 @@ lfet.project.ini:
       IniFiles:
         Path: ""
         Encoding: UTF-8
-      BaseOfVersion: DT
+      BaseOfVersion: SRC
 
       Format: true
 
@@ -58,6 +58,6 @@ lfet.project.ini:
           Trace:
             BeforeRule: |
               // logging beforeRule
-              // $$dtname
+              // $$dtname - Moin Hamburg
               decisionTableLoggingFacade.traceBeforeRule("$$dtname","$$version",$$rule,$$rules,model);
             AfterRule: decisionTableLoggingFacade.traceAfterRule("$$dtname","$$version",$$rule,$$rules,model);

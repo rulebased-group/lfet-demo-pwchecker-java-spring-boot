@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.3.0 (231116A)" language="German" saveDate="2023.11.16 at 19:07:04 CET" saveUser="lfhl">
+<LFET version="LF-ET 2.3.0 (240312a)" language="German" saveDate="2024.03.13 at 09:37:03 CET" saveUser="lfhl">
   <Conditions>
     <Condition uId="16615228278098870">
       <Title language="German" value="Anzahl Zeichen?"/>
       <ConditionOccurrences>
         <ConditionOccurrence uId="16615228719388933">
-          <Symbol language="German" value="&lt; 8"/>
-          <Title language="German" value="weniger als 8 Zeichen"/>
+          <Symbol language="German" value="&lt;= 7"/>
+          <Title language="German" value="weniger oder gleich 7 Zeichen"/>
         </ConditionOccurrence>
         <ConditionOccurrence uId="16615228719408935">
           <Symbol language="German" value="8 - 20"/>
@@ -86,11 +86,11 @@
         </ActionOccurrence>
         <ActionOccurrence uId="16615233082789556">
           <Symbol language="German" value="Len8-20"/>
-          <Title language="German" value="Das Passwort muss 8 bis 20 Zeichen lang sein"/>
+          <Title language="German" value="Das Passwort muss 9 bis 20 Zeichen lang sein"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16615229765749050">
           <Symbol language="German" value="Len&gt;20"/>
-          <Title language="German" value="Das Passwort ist zu lang, es muss 8 bis 20 Zeichen lang sein"/>
+          <Title language="German" value="Das Passwort ist zu lang, es muss 9 bis 20 Zeichen lang sein"/>
         </ActionOccurrence>
         <ActionOccurrence uId="16615235227650106">
           <Symbol language="German" value="KB2"/>
